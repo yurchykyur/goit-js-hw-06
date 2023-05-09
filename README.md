@@ -1,2 +1,2 @@
 # goit-js-hw-06
-JS homework "DOM и Події"
+JS homework "DOM та Події"
