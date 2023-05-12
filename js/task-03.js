@@ -29,6 +29,10 @@ const ulGallery = document.querySelector('.gallery');
 
 const galleryListItems = [];
 
+
+
+
+
 for (const img of images) {
   const createLiElem = document.createElement('li');
   createLiElem.classList.add('gallery-item');
