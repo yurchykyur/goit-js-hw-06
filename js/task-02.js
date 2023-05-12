@@ -8,20 +8,6 @@ const ingredients = [
 ];
 
 // Завдання 2
-// HTML містить порожній список ul#ingredients.
-
-// <ul id="ingredients"></ul>
-
-// JavaScript містить масив рядків.
-
-// const ingredients = [
-//   "Potatoes",
-//   "Mushrooms",
-//   "Garlic",
-//   "Tomatos",
-//   "Herbs",
-//   "Condiments",
-// ];
 
 // Напиши скрипт, який для кожного елемента масиву ingredients:
 
@@ -39,10 +25,7 @@ ingredients.forEach(ingredient => {
  ingredientsItem.textContent = ingredient;
  ingredientsItem.classList.add('item');
  listOfIngredients.push(ingredientsItem);
- console.log(ingredientsItem);
 })
-console.log(listOfIngredients);
 
 ulIngredients.append(...listOfIngredients)
 
-console.log(ulIngredients)
