@@ -27,24 +27,36 @@ const images = [
 
 const ulGallery = document.querySelector('.gallery');
 
-const galleryListItems = [];
+// variant 1
 
+const makeGalleryItems = galleryItems => {
+  return galleryItems.map(galleryItem => {
+    const {url, alt} = galleryItem;
 
+console.log(`<li><img src="${url}" alt="${alt}/></li>`)
 
-
-
-for (const img of images) {
-  const createLiElem = document.createElement('li');
-  createLiElem.classList.add('gallery-item');
-
-  const createImgElem = document.createElement('img');
-  createImgElem.classList.add('gallery-item-img');
-  createImgElem.src = img.url;
-  createImgElem.alt = img.alt;
-
-  createLiElem.append(createImgElem);
-
-  galleryListItems.push(createLiElem);
+   return `<li><img src="${url}" alt="${alt}/></li>`;
+  }).join('');
 }
 
-ulGallery.insertAdjacentHTML("afterbegin" ,(...galleryListItems));
+
+const elements = makeGalleryItems(images);
+console.log(elements)
+
+ulGallery.insertAdjacentHTML("afterbegin", elements);
+
+// for (const img of images) {
+//   const createLiElem = document.createElement('li');
+//   createLiElem.classList.add('gallery-item');
+
+//   const createImgElem = document.createElement('img');
+//   createImgElem.classList.add('gallery-item-img');
+//   createImgElem.src = img.url;
+//   createImgElem.alt = img.alt;
+
+//   createLiElem.append(createImgElem);
+
+//   galleryListItems.push(createLiElem);
+// }
+
+// ulGallery.insertAdjacentHTML("afterbegin" , galleryListItems.join(""));
