@@ -10,4 +10,4 @@ const refs = {
 
 refs.textOutput.style.fontSize = `${refs.inputValue}px`;
 
-refs.input.addEventListener('input', ({currentTarget}) => (refs.textOutput.style.fontSize = `${currentTarget.value}px`));
+refs.input.addEventListener('input', event => refs.textOutput.style.fontSize = `${event.currentTarget.value}px`);
