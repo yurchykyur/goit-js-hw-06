@@ -2,6 +2,12 @@
 // і змінює інлайн-стиль span#text, оновлюючи властивість font-size. 
 // В результаті, перетягуючи повзунок, буде змінюватися розмір тексту.
 
-// <input id="font-size-control" type="range" min="16" max="96" />
-// <br />
-// <span id="text">Abracadabra!</span>
+const refs = {
+    input: document.querySelector('#font-size-control'),
+    inputValue: document.querySelector('#font-size-control').value,
+    textOutput: document.querySelector('#text'),
+} 
+
+refs.textOutput.style.fontSize = `${refs.inputValue}px`;
+
+refs.input.addEventListener('input', ({currentTarget}) => (refs.textOutput.style.fontSize = `${currentTarget.value}px`));
