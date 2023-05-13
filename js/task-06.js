@@ -10,12 +10,12 @@ const refs = {
     inputDataLength: Number(document.querySelector('#validation-input').getAttribute('data-length')),
 }
 
-refs.input.addEventListener('input', onInputChange);
+refs.input.addEventListener('blur', onInputChange);
 
 function onInputChange(event) {
     if (!event.currentTarget.value) {
         refs.input.classList.remove('invalid');
-    } else if (event.currentTarget.value.length !== refs.inputDataLength) {
+    } else  if (event.currentTarget.value.length !== refs.inputDataLength) {
         addClassInvalidInput();
   } else {
       addClassValidInput();
