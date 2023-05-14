@@ -5,14 +5,12 @@
 // знайде і виведе в консоль текст заголовку елемента(тегу < h2 >)
 // і кількість елементів в категорії(усіх < li >, вкладених в нього).
 
-const categoriesElem = document.querySelector('#categories');
+const categoriesEl = document.getElementById('categories').children.length;
+console.log(`Number of categories: ${categoriesEl}`);
 
-const countCategories = categoriesElem.querySelectorAll('li.item').length;
-console.log(`Number of categories: ${countCategories}`);
+const arrayTitlesCategoriesRef = document.querySelectorAll('h2');
 
-const categoriesElemItems = categoriesElem.querySelectorAll('li.item');
-
-categoriesElemItems.forEach(function callback(element) {
-  console.log(`Category: ${element.querySelector('h2').textContent}`);
-  console.log(`Elements: ${element.querySelectorAll('li').length}`);
+arrayTitlesCategoriesRef.forEach(title => {
+  console.log('Category:', title.textContent);
+  console.log('Elements:', title.nextElementSibling.children.length);
 });

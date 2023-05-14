@@ -25,8 +25,6 @@ function onFormSubmit(event) {
 
   //  ---- variant 1 ----
 
-  console.log('variant 1');
-
   const formData1 = {
     email: refs.form.elements.email.value,
     password: refs.form.elements.password.value,
@@ -36,12 +34,12 @@ function onFormSubmit(event) {
 
   // ---- variant 2 (FormData) ----
 
-  console.log('variant 2 (FormData)');
+//   console.log('variant 2 (FormData)');
 
-  const formData2 = new FormData(event.currentTarget);
-  formData2.forEach((value, name) => {
-    console.log(name, ': ', value);
-  });
+//   const formData2 = new FormData(event.currentTarget);
+//   formData2.forEach((value, name) => {
+//     console.log(name, ': ', value);
+//   });
 
-  refs.form.reset();
-}
+//   refs.form.reset();
+// }
