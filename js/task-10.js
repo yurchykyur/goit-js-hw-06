@@ -42,13 +42,15 @@ refs.buttonDestroy.addEventListener('click', destroyBoxes);
 
 /**
  * функція запускає процедуру створення елементів.
- * спершу запускає відслідковування значення введене в інпут та перезапис значення inputValue в фукції takeInputValue.
+ * очищує раніше створені блоки
+ * запускає відслідковування значення введене в інпут та перезапис значення inputValue в фукції takeInputValue.
  * потім запускає функцію створення текстової строки та додавання її в DOM
  */
 
 function onButtonCreateDiv() {
-  refs.input.addEventListener('input', takeInputValue);
+  refs.parentOfBoxes.innerHTML = '';
 
+  refs.input.addEventListener('input', takeInputValue);
   createBoxes(inputValue);
 }
 
