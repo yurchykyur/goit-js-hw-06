@@ -36,7 +36,7 @@ function onFormSubmit(event) {
 
   // ---- variant 2 (FormData) ----
 
-  console.log('variant 2');
+  console.log('variant 2 (FormData)');
 
   const formData2 = new FormData(event.currentTarget);
   formData2.forEach((value, name) => {
