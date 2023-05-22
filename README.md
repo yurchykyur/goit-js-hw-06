@@ -1,2 +1,2 @@
-# JS homework "DOM та Події"
+# JS "DOM та Події"
 
